@@ -9,3 +9,6 @@
 .contact:hover {
   text-decoration: underline;
 }
+.address-type option {
+   margin-bottom: 20px;
+}
