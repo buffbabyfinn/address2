@@ -28,25 +28,25 @@ function resetFields() {
 
 $(document).ready(function() {
   $("#add-address").click(function() {
-  $("#new-addresses").append('<div class="new-address">' +
+  $("#new-addresses").append('<div class="new-address" id="postAddress">' +
                               '<div class="form-group">' +
-                              '<div class="form-group address-type">' +
-                                '<label>What type of address is this?</label>' +
-                                '<select type="select" class="new-type">' +
-                                '<option type="address-type">Home</option>' +
-                                '<option type="address-type">Work</option>' +
+                              '<div class="form-group address-type" id="postAddress">' +
+                                '<label id="postAddress">What type of address is this?</label>' +
+                                '<select type="select" id="postAddress" class="new-type">' +
+                                '<option type="address-type" id="postAddress">Home</option>' +
+                                '<option type="address-type" id="postAddress">Work</option>' +
                                 '</select>' +
+                              '</div class="form-group" id="postAddress">' +
+                                '<label for="new-street" id="postAddress">Street</label>' +
+                                '<input type="text" class="form-control new-street" id="postAddress">' +
                               '</div>' +
-                                '<label for="new-street">Street</label>' +
-                                '<input type="text" class="form-control new-street">' +
+                              '<div class="form-group" id="postAddress">' +
+                                '<label for="new-city" id="postAddress">City</label>' +
+                                '<input type="text" class="form-control new-city" id="postAddress">' +
                               '</div>' +
-                              '<div class="form-group">' +
-                                '<label for="new-city">City</label>' +
-                                '<input type="text" class="form-control new-city">' +
-                              '</div>' +
-                              '<div class="form-group">' +
-                                '<label for="new-state">State</label>' +
-                                '<input type="text" class="form-control new-state">' +
+                              '<div class="form-group" id="postAddress">' +
+                                '<label for="new-state" id="postAddress">State</label>' +
+                                '<input type="text" class="form-control new-state" id="postAddress">' +
                               '</div>' +
                               '</div>');
 });
@@ -67,7 +67,8 @@ $(document).ready(function() {
      newContact.addresses.push(newAddress)
    });
 
-
+      $("#postAddress").hide();
+  //  $('#postAddress').not(this).hide();
 
     $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
 
@@ -86,6 +87,7 @@ $(document).ready(function() {
     });
 
     resetFields();
+
 
   });
 });

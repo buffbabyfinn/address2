@@ -5,10 +5,9 @@
   cursor: pointer;
   color: #0088cc;
 }
-
 .contact:hover {
   text-decoration: underline;
 }
-.address-type option {
-   margin-bottom: 20px;
+.btn :hover {
+  color: purple !important;
 }
